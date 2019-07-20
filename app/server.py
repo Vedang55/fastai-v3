@@ -87,7 +87,7 @@ async def analyze(request):
     s = a[1] * a[11]
     p = a[6] 
     o = -(a[4] + a[5] + a[8])
-    score = [1 + (a[7] + o) - (s + p) ] * 50
+    score = (1 + (a[7] + o) - (s + p)) * 50
 
     return JSONResponse({'result': str(prediction) + ' \n' + str(score)})
 
