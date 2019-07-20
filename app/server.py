@@ -73,7 +73,7 @@ async def analyze(request):
     img_bytes = await (img_data['file'].read())
    
     prediction = learn.predict(img_bytes)[0]
-    return HTMLResponse(f'{str(prediction)}')
+    return HTMLResponse(template.render(f'<h1>{str(prediction)}</h1>'))
 
 
 
