@@ -5,34 +5,13 @@
   <script src='../static/client.js'></script>
 </head>
 <body>
-<div>
-  <div class='center'>
-    <div class='title'>Classify Bear Images 🐻</div>
-    <p>
-      Use images of <strong>teddy</strong> bears, <strong>black</strong> bears, <strong>grizzly</strong> bears, or
-      all three!
-    </p>
-    <div class='content'>
-      <div class='no-display'>
-        
-      <input type="text" name="file"><br>
 
-      </div>
-      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
-      <div class='upload-label'>
-        <label id='upload-label'>No file chosen</label>
-      </div>
-      <div>
-        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-      </div>
-      <div class='analyze'>
-        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
-      </div>
-      <div class='result-label'>
-        <label id='result-label'></label>
-      </div>
+        
+    <input type="text" name="file" value="text"><br>
+    <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>  
+    <div class='result-label'>
+       <label id='result-label'></label>
     </div>
-  </div>
-</div>
+
 </body>
 </html>
