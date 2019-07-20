@@ -69,11 +69,19 @@ async def homepage(request):
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
-    img_data = await request.form()
-    img_bytes = await (img_data['file'].read())
-   
-    prediction = learn.predict(img_bytes)[0]
-    return HTMLResponse(template.render(f'<h1>{str(prediction)}</h1>'))
+    data = await request.json()
+    #data = await request.args['data']
+    print("data:", data)
+    # img_bytes = await (data['file'].read())
+    # took out img_bytes
+    # img = open_image(BytesIO(img_bytes))
+    img = data["textField"]
+    print("data['textField']", data["textField"])
+    print("img:", img)
+    # prediction = learn.predict(img)[0]
+    prediction = learn.predict(img)
+    print("prediction:", prediction)
+    return JSONResponse({'result': str(prediction)})
 
 
 
