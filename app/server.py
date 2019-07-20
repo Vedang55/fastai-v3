@@ -10,7 +10,7 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
 export_file_url = 'https://www.googleapis.com/drive/v3/files/1-0T-bnNTbRR6AWg6IcW-pxhXG5VYgxos?alt=media&key=AIzaSyAG5J8jVv_BR6_TdY9xun9s78Z_eRDYC24'
-export_file_name = 'export.pkl'
+export_file_name = 'export'
 
 classes =['bias',
  'clickbait',
